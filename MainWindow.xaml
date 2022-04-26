@@ -26,9 +26,9 @@
             <Label Content="Razão Social:" HorizontalAlignment="Left" Margin="25,22,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" Grid.Column="1"/>
             <Label Content="Inscrição Estadual:" HorizontalAlignment="Left" Margin="25,73,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" Grid.Column="1"/>
             <TextBox HorizontalAlignment="Left" Margin="34,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="32" Grid.Column="1"/>
-            <TextBox Name="BxNomeFantasia" HorizontalAlignment="Left" Margin="155,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="24"/>
-            <TextBox HorizontalAlignment="Left" Margin="155,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="24" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" Margin="155,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="24" Grid.Column="1"/>
+            <TextBox x:Name="TxtNomeFantasia" HorizontalAlignment="Left" Margin="155,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="24"/>
+            <TextBox x:Name="TxtRazao" HorizontalAlignment="Left" Margin="155,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="24" Grid.Column="1"/>
+            <TextBox x:Name="TxtInsc" HorizontalAlignment="Left" Margin="155,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="24" Grid.Column="1"/>
             <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="3" Margin="0,4,0,0" Stroke="Black" VerticalAlignment="Top" Width="900" Fill="Black"/>
 
 
@@ -41,10 +41,10 @@
             </Grid.ColumnDefinitions>
             <Label Content="Informações Principais" HorizontalAlignment="Left" Margin="73,0,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
             <Label Content="Tipo:" HorizontalAlignment="Left" Margin="23,48,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal"/>
-            <RadioButton Content="Pública" HorizontalAlignment="Left" Margin="109,54,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-            <RadioButton Content="Privada" HorizontalAlignment="Left" Margin="225,54,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+            <RadioButton x:Name="RadioTipoPub" Content="Pública" HorizontalAlignment="Left" Margin="109,54,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+            <RadioButton x:Name="RadioTipoPri" Content="Privada" HorizontalAlignment="Left" Margin="225,54,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
             <Label Content="Data de Criação:" HorizontalAlignment="Left" Margin="23,89,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal"/>
-            <DatePicker HorizontalAlignment="Left" Margin="154,88,0,0" VerticalAlignment="Top" Height="29" Width="178"/>
+            <DatePicker x:Name="TxtData" HorizontalAlignment="Left" Margin="154,88,0,0" VerticalAlignment="Top" Height="29" Width="178"/>
             <Label Content="Responsável" HorizontalAlignment="Left" Margin="24,119,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
             <Label Content="Nome:" HorizontalAlignment="Left" Margin="23,163,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" RenderTransformOrigin="1.799,0.59"/>
             <Label Content="Telefone:" HorizontalAlignment="Left" Margin="267,163,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" RenderTransformOrigin="1.799,0.59"/>
@@ -58,17 +58,17 @@
             <Label Content="Cidade:" HorizontalAlignment="Left" Margin="227,129,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" RenderTransformOrigin="1.799,0.59" Grid.Column="1"/>
             <Label Content="Cep:" HorizontalAlignment="Left" Margin="29,129,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" RenderTransformOrigin="1.799,0.59" Grid.Column="1"/>
             <Label Content="Estado:" HorizontalAlignment="Left" Margin="225,186,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" RenderTransformOrigin="1.799,0.59" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" Margin="24,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="23" Name="BxNome"/>
-            <TextBox HorizontalAlignment="Left" Margin="267,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Height="23"/>
-            <TextBox HorizontalAlignment="Left" Margin="29,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="23" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" Margin="225,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="23" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" Margin="28,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="23" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" Margin="227,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="23" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" Margin="29,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="23" Grid.Column="1" RenderTransformOrigin="0.504,0.35"/>
-            <TextBox HorizontalAlignment="Left" Margin="227,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="23" Grid.Column="1" RenderTransformOrigin="0.504,0.35"/>
-            <TextBox HorizontalAlignment="Left" Margin="384,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="23" Grid.Column="1" RenderTransformOrigin="0.504,0.35"/>
-            <TextBox HorizontalAlignment="Left" Margin="29,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="23" Grid.Column="1" RenderTransformOrigin="0.504,0.35"/>
-            <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="227,210,0,0" VerticalAlignment="Top" Width="120">
+            <TextBox HorizontalAlignment="Left" Margin="24,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="23" x:Name="TxtNome"/>
+            <TextBox x:Name="TxtTelefoneResp" HorizontalAlignment="Left" Margin="267,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Height="23"/>
+            <TextBox x:Name="TxtTelefone" HorizontalAlignment="Left" Margin="29,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="23" Grid.Column="1"/>
+            <TextBox x:Name="TxtEmail" HorizontalAlignment="Left" Margin="225,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="23" Grid.Column="1"/>
+            <TextBox x:Name="TxtRua" HorizontalAlignment="Left" Margin="28,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="23" Grid.Column="1"/>
+            <TextBox x:Name="TxtBairro" HorizontalAlignment="Left" Margin="227,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="23" Grid.Column="1"/>
+            <TextBox x:Name="TxtCep" HorizontalAlignment="Left" Margin="29,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="23" Grid.Column="1" RenderTransformOrigin="0.504,0.35"/>
+            <TextBox x:Name="TxtCidade" HorizontalAlignment="Left" Margin="227,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="23" Grid.Column="1" RenderTransformOrigin="0.504,0.35"/>
+            <TextBox x:Name="TxtN" HorizontalAlignment="Left" Margin="384,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="23" Grid.Column="1" RenderTransformOrigin="0.504,0.35"/>
+            <TextBox x:Name="TxtCompremento" HorizontalAlignment="Left" Margin="29,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="23" Grid.Column="1" RenderTransformOrigin="0.504,0.35"/>
+            <ComboBox x:Name="TxtEstado" Grid.Column="1" HorizontalAlignment="Left" Margin="227,210,0,0" VerticalAlignment="Top" Width="120">
                 <ComboBoxItem>AC</ComboBoxItem>
                 <ComboBoxItem>AL</ComboBoxItem>
                 <ComboBoxItem>AP</ComboBoxItem>
@@ -106,8 +106,8 @@
 
         </Grid>
         <Label Content="IFRO - Cadastro" HorizontalAlignment="Center" VerticalAlignment="Center" Width="238" Height="38" FontSize="22" FontWeight="Bold"/>
-        <TextBox Margin="155,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="24" Grid.Row="1" HorizontalAlignment="Left"/>
-        <Button Content="Salvar" HorizontalAlignment="Left" Margin="702,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="96" Height="39" FontSize="20" Background="White" Foreground="#FF020101"/>
+        <TextBox x:Name="TxtCNPJ" Margin="155,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="24" Grid.Row="1" HorizontalAlignment="Left"/>
+        <Button x:Name="BtSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="702,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="96" Height="39" FontSize="20" Background="White" Foreground="#FF020101" Click="BtSalvar_Click"/>
 
     </Grid>
 </Window>
