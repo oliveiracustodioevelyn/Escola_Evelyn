@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\2020102011084-7\Desktop\PDS\AtivEscola\Escola_Evelyn\App.xaml
-1219584333
+3-215798917
 
-6-502434485
+111938686679
 32-1212365681
-MainWindow.xaml;
+Views\EscolaList.xaml;MainWindow.xaml;Views\EscolaFormWindow.xaml;
 
-True
+False
 

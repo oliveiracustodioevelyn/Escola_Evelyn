@@ -53,3 +53,7 @@ C:\Users\2020102011084-7\Desktop\PDS\AtivEscola\Escola_Evelyn\bin\Debug\System.M
 C:\Users\2020102011084-7\Desktop\PDS\AtivEscola\Escola_Evelyn\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\2020102011084-7\Desktop\PDS\AtivEscola\Escola_Evelyn\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\2020102011084-7\Desktop\PDS\AtivEscola\Escola_Evelyn\obj\Debug\AtivEscola.csproj.CopyComplete
+C:\Users\2020102011084-7\Desktop\PDS\AtivEscola\Escola_Evelyn\obj\Debug\Views\EscolaList.g.cs
+C:\Users\2020102011084-7\Desktop\PDS\AtivEscola\Escola_Evelyn\obj\Debug\Views\EscolaFormWindow.g.cs
+C:\Users\2020102011084-7\Desktop\PDS\AtivEscola\Escola_Evelyn\obj\Debug\Views\EscolaList.baml
+C:\Users\2020102011084-7\Desktop\PDS\AtivEscola\Escola_Evelyn\obj\Debug\Views\EscolaFormWindow.baml

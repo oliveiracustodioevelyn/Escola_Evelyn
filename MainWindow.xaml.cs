@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using AtivEscola.Views;
 
 namespace AtivEscola
 {
@@ -24,10 +25,12 @@ namespace AtivEscola
         public MainWindow()
         {
             InitializeComponent();
-
+            EscolaFormWindow escola = new EscolaFormWindow();   
+            escola.ShowDialog();
 
         }
-            
+
+        
 
         private void BtSalvar_Click(object sender, RoutedEventArgs e)
         {
@@ -46,9 +49,14 @@ namespace AtivEscola
             string cep = TxtCep.Text;
             string cidade = TxtCidade.Text;
             string estado = TxtEstado.Text;
+            string tipo = "Privada";
+            if ((bool)RadioTipoPub.IsChecked)
+            {
+                tipo = "Pública";
+            }
 
 
-                var conexao = new MySqlConnection("server=localhost; database=BD_ESCOLA; port=3360; user=root; password=root");
+            var conexao = new MySqlConnection("server=localhost; database=BD_ESCOLA; port=3360; user=root; password=root");
 
                 conexao.Open();
 
@@ -59,23 +67,22 @@ namespace AtivEscola
                     comando.CommandText = "INSERT INTO Escola values(null,@nome, @razao, @cnpj,@inscricao, @tipo, @data_criacao, @resp, " +
                     "@resp_tel, @email, @numero, @bairro, @complemento, @cep, @cidade, @estado;)";
 
-                comando.Parameters.AddWithValue("@nome", fantasia);
-                comando.Parameters.AddWithValue("@razao", razao);
-                comando.Parameters.AddWithValue("@cnpj", cnpj);
-                comando.Parameters.AddWithValue("@inscricao", inscricao);
-                        comando.Parameters.AddWithValue("@tipo", RadioTipoPri);
-                        comando.Parameters.AddWithValue("@tipo", RadioTipoPub);
-                comando.Parameters.AddWithValue("@data_criacao", data);
-                comando.Parameters.AddWithValue("@resp", resp);
-                comando.Parameters.AddWithValue("@resp_tel", resp_tel);
-                comando.Parameters.AddWithValue("@email", email);
-                comando.Parameters.AddWithValue("@bairro", bairro);
-                comando.Parameters.AddWithValue("@complemento", comp);
-                comando.Parameters.AddWithValue("@inscricao", inscricao);
-                comando.Parameters.AddWithValue("@cep", cep);
-                comando.Parameters.AddWithValue("@cidade", cidade);
-                comando.Parameters.AddWithValue("@estado", estado);
+                    comando.Parameters.AddWithValue("@nome", fantasia);
+                    comando.Parameters.AddWithValue("@razao", razao);
+                    comando.Parameters.AddWithValue("@cnpj", cnpj);
+                    comando.Parameters.AddWithValue("@inscricao", inscricao);
+                    comando.Parameters.AddWithValue("@tipo", tipo);
+                    comando.Parameters.AddWithValue("@data_criacao", data);
+                    comando.Parameters.AddWithValue("@resp", resp);
+                    comando.Parameters.AddWithValue("@resp_tel", resp_tel);
+                    comando.Parameters.AddWithValue("@email", email);
+                    comando.Parameters.AddWithValue("@bairro", bairro);
+                    comando.Parameters.AddWithValue("@complemento", comp);
+                    comando.Parameters.AddWithValue("@cep", cep);
+                    comando.Parameters.AddWithValue("@cidade", cidade);
+                    comando.Parameters.AddWithValue("@estado", estado);
 
+                
 
                     var resultado = comando.ExecuteNonQuery();
                     if (resultado > 0)
