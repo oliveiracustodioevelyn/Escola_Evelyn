@@ -20,7 +20,7 @@ namespace AtivEscola.DataBase
 
             private static string password = "root";
 
-            private static string dbname = "dssistemas_db";
+            private static string dbname = "bd_escola";
 
             private static MySqlConnection connection;
 
